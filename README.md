@@ -1,8 +1,31 @@
-# my_first_sourcetree_repo
+# USA Airline Delay Causes Dashboard
 
-This project is an ongoing project. The dataset is taken from Kaggle. 
+Interactive Streamlit dashboard exploring US flight delays and cancellations by year, month, state, and airport.
 
-This is a data visualization project, a simple one made using the Streamlit library of Python. (lmao no more css and html hell hole.)
 
-I learnt a lot during this process. Thank you very much to my supervisor - chị Hải Hà, and the whole Data team at Viettel IDC for making this possible for me. You guys are becoming one of my biggest inspiration, and its my honor to meet such an amazing multiple hat team who welcomed me with all their might. Em cảm ơn các anh chị rất rất rất là nhìuuuu. I may intern here for a month, but what you guys taught me about the jobs you do...I may remember it all my life. Nếu còn duyên em tin rằng em còn gặp các anh chị dài dài hehee các anh chị chưa bỏ được em đâuuuuuu. 
+## Questions explored
+- What causes most delays, and how does it vary by month?
+- How do delays/cancellations compare with the previous year?
+- Which states and airports are most affected relative to flight volume?
 
+
+## Data
+- Taken from Kaggle
+
+## Approach
+- Merged datasets on IATA code; removed airports without valid codes
+- Used rates (delayed + cancelled ÷ total flights) instead of raw counts so busy airports don't dominate
+- Grouped delay causes under 5% out of the pie for readability
+
+## Features
+- Year/month filters, YoY change metrics, cause breakdown, gauges, monthly trends, state choropleth, top-10 airports
+
+## Tech
+Python, Streamlit, pandas, Plotly, Matplotlib
+
+## Run locally
+pip install -r requirements.txt
+streamlit run app.py
+
+## Limitations / next steps
+- (e.g. add carrier filter, cache data loading, add delay duration analysis)
